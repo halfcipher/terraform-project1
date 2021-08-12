@@ -1,6 +1,6 @@
 provider "google" {
     version = "3.69.0"
-    project = "XXX-1"
+    project = "XXX-X"
     region = "us-central1"
 
 }
@@ -60,7 +60,7 @@ resource "google_compute_firewall" "firewall-2" {
 
 
 resource "google_compute_instance" "terraform1" {
-  project      = "ce-shubham-kadam-304313"
+  project      = "XXX-X"
   name         = "terraform-machine-1"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
@@ -81,7 +81,7 @@ resource "google_compute_instance" "terraform1" {
 }
 
 resource "google_compute_instance" "terraform2" {
-  project      = "ce-shubham-kadam-304313"
+  project      = "XXX-X"
   name         = "terraform-machine-2"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
