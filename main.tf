@@ -1,6 +1,6 @@
 provider "google" {
     version = "3.69.0"
-    project = "ce-shubham-kadam-304313"
+    project = "XXX-1"
     region = "us-central1"
 
 }
@@ -13,7 +13,7 @@ resource "google_compute_subnetwork" "public-subnetwork1" {
 }
 
 resource "google_compute_subnetwork" "public-subnetwork2" {
-    name = "subnet-b"x`
+    name = "subnet-b"
     ip_cidr_range = "10.0.2.0/24"
     region = "us-central1"
     network = google_compute_network.vpc_network.name
@@ -91,7 +91,7 @@ resource "google_compute_instance" "terraform2" {
     }
   }
   
-  metadata_startup_script = "#!/bin/sh; sudo apt update -y && sudo apt upgrade -y; sudo apt install mysql-server -y; sed -i '/port = 3306/c\port = 8006' /etc/mysql/mariadb.conf.d/50-server.cnf; sudo service mysql restart"
+  metadata_startup_script = "#!/bin/sh; sudo apt update -y && sudo apt upgrade -y; sudo apt install mysql-server -y; sed -i '/port = 3306/c/port = 8006' /etc/mysql/mariadb.conf.d/50-server.cnf; sudo service mysql restart"
 
   network_interface {
     network = google_compute_network.vpc_network.name
